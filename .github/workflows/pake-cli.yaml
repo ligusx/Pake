@@ -135,7 +135,7 @@ jobs:
         with:
           name: output-${{ inputs.platform }}.zip
           path: D:\a\Pake\Pake\node_modules\pake-cli\*.msi
-          path: node_modules/pake-cli/output/*
+         # path: node_modules/pake-cli/output/*
           retention-days: 3
 
       - name: Rust cache store
