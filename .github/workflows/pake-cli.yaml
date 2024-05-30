@@ -134,7 +134,7 @@ jobs:
           TARGETS: ${{ inputs.targets }}
           SAFE_DOMAIN: ${{ inputs.safe_domain }}
 
-      - name: Upload archive linux mac
+      - name: Upload archive linux
         uses: actions/upload-artifact@v3
         with:
           name: output-${{ inputs.platform }}.zip
@@ -146,6 +146,13 @@ jobs:
         with:
           name: output-${{ inputs.platform }}.zip
           path: D:\a\Pake\Pake\node_modules\pake-cli\*.msi
+          retention-days: 3
+          
+      - name: Upload archive Mac
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-${{ inputs.platform }}.zip
+          path: /Users/runner/work/Pake/Pake/node_modules/pake-cli/*
           retention-days: 3
 
       - name: Rust cache store
