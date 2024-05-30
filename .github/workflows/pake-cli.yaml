@@ -148,7 +148,7 @@ jobs:
           path: D:\a\Pake\Pake\node_modules\pake-cli\*.msi
           retention-days: 3
           
-      - name: Upload archive Mac
+      - name: Upload archive Macos
         uses: actions/upload-artifact@v3
         with:
           name: output-${{ inputs.platform }}.zip
